@@ -465,7 +465,7 @@ class ETFBAOptimizer(TFBAOptimizer):
 				raise ValueError("exchange reaction %s can't be included in enzyme protein cost" % rxnid)
 				
 		def obj_rule(model):
-			return sum(self._calculate_enzyme_cost(model, self.included_epc)) - sum(coe*model.fluxes[rxnid] for rxnid, coe in self.objective.items())
+			return sum(self._calculate_enzyme_cost(model, self.included_epc))
 			
 		self.pyoModel.obj = Objective(rule = obj_rule, sense = minimize)   # always minimize the objective
 		
