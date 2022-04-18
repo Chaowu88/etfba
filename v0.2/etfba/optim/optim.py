@@ -444,7 +444,7 @@ class ETFBAOptimizer(TFBAOptimizer):
 	def _build_flux_parameters(self):
 		
 		if self.use_fba_results:
-			optFluxes = TFBAOptimizer(self.model, self.objective, self.direction, self.flux_bounds, self.preset_fluxes, 
+			optFluxes = FBAOptimizer(self.model, self.objective, self.direction, self.flux_bounds, self.preset_fluxes, 
 									  self.irr_reactions, self.excluded_mb).solve().opt_fluxes
 		
 		if self.use_tfba_results:
