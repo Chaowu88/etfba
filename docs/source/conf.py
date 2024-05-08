@@ -11,7 +11,7 @@ sys.path.insert(0, SRC_PATH)
 project = 'etfba'
 copyright = '2024, Chao Wu'
 author = 'Chao Wu'
-from freeflux import __version__ as version
+from etfba import __version__ as version
 release = version
 
 pygments_style = 'sphinx'
