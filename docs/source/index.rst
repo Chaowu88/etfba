@@ -1,13 +1,12 @@
 Documentation for ETFBA
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+ETFBA is a Python package for metabolic flux balance analysis integrating constraints of enzyme protein allocation and thermodynamics. ETFBA is capabable of:
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+- Growth simulation and metabolite flux estimation
+- Variability analysis of flux, enzyme protein cost and reaction Gibbs energy change
+
+with the above constraints seperately or together.
 
 .. note::
 
