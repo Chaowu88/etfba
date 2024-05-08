@@ -1,0 +1,105 @@
+# ΔG’m
+\Delta G'^m = \Delta G'^0 + 3ln10\cdot R\cdot T\cdot (\sum_{i}^{}n_{s,i}-\sum_{j}^{}n_{p,j})
+
+
+# FBA
+\begin{aligned}
+\max_{\bf{v}} \quad & {\rm{ }} {\bf{a}}^T \bf{v} \\
+s.t. \quad & {\rm{}} \bf{Sv} = \bf{0} \\
+&{\rm{}} {\bf{0}} \le {\bf{v}} \le {\bf{v}}_{ub}
+\end{aligned}
+
+
+# pFBA
+\begin{aligned}
+\min_{\bf{v}} \quad & {\rm{}} {\left \|\bf{v} \right \|}_{1} \\
+s.t. \quad & {\rm{}} {{\bf{a}}^T \bf{v}} \ge (1-slack)\cdot opt_{obj} \\ 
+&{\rm{}} \bf{Sv} = \bf{0} \\
+&{\rm{}} {\bf{0}} \le {\bf{v}} \le {\bf{v}}_{ub}
+\end{aligned}
+
+
+# EFBA
+\begin{aligned}
+\max_{\bf{v}} \quad & {\rm{}} {\bf{a}}^T \bf{v} \\
+s.t. \quad & {\rm{}} \bf{Sv} = \bf{0} \\
+&{\rm{}} \sum_{i}^{n_{irr}} MW_{i} \frac{v_{i}}{\eta_{i} \cdot  k_{cat,i}} + 
+\sum_{j}^{n_{rev}} MW_{j} (\frac{v_{j}^{+}}{\eta_{j}^{+} \cdot  k_{cat,j}^{+}} + \frac{v_{j}^{-}}{\eta_{j}^{-} \cdot  k_{cat,j}^{-}}) \le Q \\
+&{\rm{}} {\bf{0}} \le {\bf{v}} \le {\bf{v}}_{ub}
+\end{aligned}
+
+
+# TFBA
+\begin{aligned}
+\max_{\mathrm{ln}\bf{c},\bf{v},\bf{x}} \quad & {\rm{}} {\bf{a}}^T \bf{v} \\
+s.t. \quad & {\rm{}} \bf{Sv} = \bf{0} \\
+&{\rm{}} \Delta {\bf G}_r' < K(\bf{1} - \bf{x}) \\
+&{\rm{}} \Delta {\bf G}_r' = \Delta {\bf G}_r^{'m} + R\cdot T\cdot {\bf{S}}^T \mathrm{ln}\bf{c} \\
+&{\rm{}} \mathrm{ln}{\bf{c}}_{lb} \le \mathrm{ln}{\bf{c}} \le \mathrm{ln}{\bf{c}}_{ub} \\
+&{\rm{}} {\bf{0}} \le {\bf{v}} \le \bf{x} \odot {\bf{v}}_{ub} \\
+&{\rm{}} x_i \in \{0,1\}
+\end{aligned}
+
+
+# ETFBA
+\begin{aligned}
+\max_{\mathrm{ln}\bf{c},\bf{v},\bf{x}} \quad & {\rm{}} {\bf{a}}^T \bf{v} \\
+s.t. \quad & {\rm{}} \bf{Sv} = \bf{0} \\
+&{\rm{}} \Delta {\bf G}_r' < K(\bf{1} - \bf{x}) \\
+&{\rm{}} \Delta {\bf G}_r' = \Delta {\bf G}_r^{'m} + R\cdot T\cdot {\bf{S}}^T \mathrm{ln}\bf{c} \\
+&{\rm{}} \sum_{i}^{n_{irr}} MW_{i} \frac{v_{i}}{\eta_{i} \cdot  k_{cat,i}} + 
+\sum_{j}^{n_{rev}} MW_{j} (\frac{v_{j}^{+}}{\eta_{j}^{+} \cdot  k_{cat,j}^{+}} + \frac{v_{j}^{-}}{\eta_{j}^{-} \cdot  k_{cat,j}^{-}}) \le Q \\
+&{\rm{}} \mathrm{ln}{\bf{c}}_{lb} \le \mathrm{ln}{\bf{c}} \le \mathrm{ln}{\bf{c}}_{ub} \\
+&{\rm{}} {\bf{0}} \le {\bf{v}} \le \bf{x} \odot {\bf{v}}_{ub} \\
+&{\rm{}} x_i \in \{0,1\}
+\end{aligned}
+
+
+
+# ETFVA
+\begin{aligned}
+\max_{\mathrm{ln}\bf{c},\bf{v},\bf{x}} / \min_{\mathrm{ln}\bf{c},\bf{v},\bf{x}} \quad &{\rm{}} v_i \\
+s.t. \quad & {\rm{}} {\bf{a}}^T {\bf{v}} \ge \gamma \cdot opt_{obj} \\
+&{\rm{}} \bf{Sv} = \bf{0} \\ 
+&{\rm{}} \Delta {\bf G}_r' < K(\bf{1} - \bf{x}) \\
+&{\rm{}} \Delta {\bf G}_r' = \Delta {\bf G}_r^{'m} + R\cdot T\cdot {\bf{S}}^T \mathrm{ln}\bf{c} \\
+&{\rm{}} \sum_{i}^{n_{irr}} MW_{i} \frac{v_{i}}{\eta_{i} \cdot  k_{cat,i}} + 
+\sum_{j}^{n_{rev}} MW_{j} (\frac{v_{j}^{+}}{\eta_{j}^{+} \cdot  k_{cat,j}^{+}} + \frac{v_{j}^{-}}{\eta_{j}^{-} \cdot  k_{cat,j}^{-}}) \le Q \\
+&{\rm{}} \mathrm{ln}{\bf{c}}_{lb} \le \mathrm{ln}{\bf{c}} \le \mathrm{ln}{\bf{c}}_{ub} \\
+&{\rm{}} {\bf{0}} \le {\bf{v}} \le \bf{x} \odot {\bf{v}}_{ub} \\
+&{\rm{}} x_i \in \{0,1\}
+\end{aligned}
+
+
+# TEVA
+\begin{aligned}
+\max_{\mathrm{ln}\bf{c},\bf{v},\bf{x}} / \min_{\mathrm{ln}\bf{c},\bf{v},\bf{x}} \quad &{\rm{}} MW_{i} \frac{v_{i}}{\eta_{i} \cdot  k_{cat,i}} \ (\mathrm{or} \ MW_{j} (\frac{v_{j}^{+}}{\eta_{j}^{+} \cdot  k_{cat,j}^{+}} + \frac{v_{j}^{-}}{\eta_{j}^{-} \cdot  k_{cat,j}^{-}})) \\
+s.t. \quad & {\rm{}} {\bf{a}}^T {\bf{v}} \ge \gamma \cdot opt_{obj} \\
+&{\rm{}} \bf{Sv} = \bf{0} \\ 
+&{\rm{}} \Delta {\bf G}_r' < K(\bf{1} - \bf{x}) \\
+&{\rm{}} \Delta {\bf G}_r' = \Delta {\bf G}_r^{'m} + R\cdot T\cdot {\bf{S}}^T \mathrm{ln}\bf{c} \\
+&{\rm{}} \sum_{i}^{n_{irr}} MW_{i} \frac{v_{i}}{\eta_{i} \cdot  k_{cat,i}} + 
+\sum_{j}^{n_{rev}} MW_{j} (\frac{v_{j}^{+}}{\eta_{j}^{+} \cdot  k_{cat,j}^{+}} + \frac{v_{j}^{-}}{\eta_{j}^{-} \cdot  k_{cat,j}^{-}}) \le Q \\
+&{\rm{}} \mathrm{ln}{\bf{c}}_{lb} \le \mathrm{ln}{\bf{c}} \le \mathrm{ln}{\bf{c}}_{ub} \\
+&{\rm{}} {\bf{0}} \le {\bf{v}} \le \bf{x} \odot {\bf{v}}_{ub} \\
+&{\rm{}} x_i \in \{0,1\}
+\end{aligned}
+
+# ETVA
+\begin{aligned}
+\max_{\mathrm{ln}\bf{c},\bf{v},\bf{x}} / \min_{\mathrm{ln}\bf{c},\bf{v},\bf{x}} \quad &{\rm{}} \Delta G_{r,i}' \\
+s.t. \quad & {\rm{}} {\bf{a}}^T {\bf{v}} \ge \gamma \cdot opt_{obj} \\
+&{\rm{}} \bf{Sv} = \bf{0} \\ 
+&{\rm{}} \Delta {\bf G}_r' < K(\bf{1} - \bf{x}) \\
+&{\rm{}} \Delta {\bf G}_r' = \Delta {\bf G}_r^{'m} + R\cdot T\cdot {\bf{S}}^T \mathrm{ln}\bf{c} \\
+&{\rm{}} \sum_{i}^{n_{irr}} MW_{i} \frac{v_{i}}{\eta_{i} \cdot  k_{cat,i}} + 
+\sum_{j}^{n_{rev}} MW_{j} (\frac{v_{j}^{+}}{\eta_{j}^{+} \cdot  k_{cat,j}^{+}} + \frac{v_{j}^{-}}{\eta_{j}^{-} \cdot  k_{cat,j}^{-}}) \le Q \\
+&{\rm{}} \mathrm{ln}{\bf{c}}_{lb} \le \mathrm{ln}{\bf{c}} \le \mathrm{ln}{\bf{c}}_{ub} \\
+&{\rm{}} {\bf{0}} \le {\bf{v}} \le \bf{x} \odot {\bf{v}}_{ub} \\
+&{\rm{}} x_i \in \{0,1\}
+\end{aligned}
+
+
+
+
+
