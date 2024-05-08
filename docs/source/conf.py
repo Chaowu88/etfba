@@ -1,35 +1,84 @@
 # Configuration file for the Sphinx documentation builder.
 
-# -- Project information
+import sys
+from os.path import dirname, join
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+SRC_PATH = join(dirname(dirname(dirname(__file__))), 'src')
+sys.path.insert(0, SRC_PATH)
 
-release = '0.1'
-version = '0.1.0'
 
-# -- General configuration
+# ------------------------ Project information ------------------------
+project = 'etfba'
+copyright = '2024, Chao Wu'
+author = 'Chao Wu'
+from freeflux import __version__ as version
+release = version
 
-extensions = [
-    'sphinx.ext.duration',
-    'sphinx.ext.doctest',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.intersphinx',
-]
+pygments_style = 'sphinx'
 
-intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/', None),
-    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
-}
-intersphinx_disabled_domains = ['std']
 
-templates_path = ['_templates']
+# ------------------------ General configuration ------------------------
+extensions = ['sphinx.ext.autodoc',
+              'sphinx.ext.napoleon',
+              'sphinx.ext.intersphinx',
+              'sphinx.ext.mathjax',
+              'sphinx.ext.viewcode',
+              'sphinx.ext.autosummary',
+              'nbsphinx',
+              'autoapi.extension']
 
-# -- Options for HTML output
+autoapi_type = 'python'
+autoapi_dirs = [join(SRC_PATH, 'etfba')]
+autoapi_add_toctree_entry = False
 
-html_theme = 'sphinx_rtd_theme'
+source_suffix = '.rst'
+master_doc = 'index'
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+exclude_patterns = ['_build']
 
-# -- Options for EPUB output
-epub_show_urls = 'footnote'
+
+# ------------------------ Options for HTML output ------------------------
+mathjax_path = ('https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML')
+
+
+# ------------------------ Options for LaTeX output ------------------------
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title, author, 
+#  documentclass [howto, manual, or own class]).
+latex_documents = [(master_doc, 
+                    project+'.tex', 
+                    project+' Documentation',
+                    author,
+                    'manual')]
+
+
+# ------------------------ Options for manual page output ------------------------
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+man_pages = [(master_doc, 
+              project, 
+              project+' Documentation',
+              [author], 
+              1)]
+
+
+# ------------------------ Options for Texinfo output ------------------------
+# Grouping the document tree into Texinfo files. List of tuples
+# (source start file, target name, title, author,
+#  dir menu entry, description, category)
+texinfo_documents = [(master_doc,
+                      project,
+                      project+' Documentation',
+                      author,
+                      'etfba',
+                      'A package for constraints-based metabolic flux analysis',
+                      'Miscellaneous')]
+
+# Example configuration for intersphinx: refer to the Python standard library.
+intersphinx_mapping = {'python': ('https://docs.python.org/3/', None),
+                       'numpy': ('https://numpy.org/doc/stable/', None),
+                       'pandas': ('https://pandas.pydata.org/docs/', None),
+                       'scipy': ('https://docs.scipy.org/doc/scipy/', None),
+                       'pyomo': ('https://pyomo.readthedocs.io/en/stable/', None),
+                       'sympy': ('https://docs.sympy.org/latest/', None)}
