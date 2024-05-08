@@ -2,7 +2,7 @@
 
 
 from math import exp
-from .io import save_values
+from .inputs import save_values
 
 
 class PrettyDict(dict):

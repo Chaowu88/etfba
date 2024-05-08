@@ -12,7 +12,7 @@ from ..optim.variability import (FVAOptimizer, TFVAOptimizer, EFVAOptimizer,
                                  ETFVAOptimizer, TVAOptimizer, ETVAOptimizer, 
                                  EVAOptimizer, TEVAOptimizer)
 from ..io.results import PrettyDict
-from ..io.io import load_model, save_model
+from ..io.inputs import load_model, save_model
 
 
 class Model():
