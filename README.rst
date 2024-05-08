@@ -1,4 +1,4 @@
-Template for the Read the Docs tutorial
+ETFBA
 =======================================
 
 This GitHub template includes fictional Python library
