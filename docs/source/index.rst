@@ -8,14 +8,20 @@ ETFBA is a Python package for metabolic flux balance analysis integrating constr
 
 with the above constraints seperately or together.
 
-.. note::
-
-   This project is under active development.
-
-Contents
---------
-
 .. toctree::
+   :numbered:
+   :maxdepth: 2
+   :caption: Contents:
+   
+   installation
+   building_model
+   constraint_based_flux_analysis
+   variability_analysis
+   API </autoapi/etfba/index.rst>
 
-   usage
-   api
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
