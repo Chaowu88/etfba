@@ -29,18 +29,18 @@ Then, install ETFBA using *pip*:
   pip install /path/to/etfba
   
 .. Note::
-  Note that it's recommended to install FreeFlux within a `virtual environment <https://docs.python.org/3.8/tutorial/venv.html>`_ to avoid conflicts with other Python packages.
+  It's recommended to install ETFBA within a virtual environment to avoid conflicts with other Python packages. Refer to these `instructions <https://docs.python.org/3.8/tutorial/venv.html>`_ on creating virtual environments.
 
 Solver Installation
 -------------------
  
-ETFBA uses the modeling language `Pyomo <http://www.pyomo.org/>`__ to formulate linear programming (LP) and mixed integer linear programming (MILP) problems. For small-sized models, the freely available solver glpk is capable of handling the work, which can be install by:
+ETFBA uses the modeling language `Pyomo <http://www.pyomo.org/>`__ to formulate linear programming (LP) and mixed integer linear programming (MILP) problems. For small-sized models, the freely available solver glpk is capable of handling the workload, which can be installed by:
 
 .. code-block:: python
   
   conda install -c conda-forge glpk  
 
-For larger models, for example, the genome scale models, it is highly recommended to use the commercial optimizer `Gurobi <https://www.gurobi.com/>`_ and install the Python support:
+For larger models, such as genome scale models, it is highly recommended to use the commercial optimizer `Gurobi <https://www.gurobi.com/>`_ and install the Python support:
 
 .. code-block:: python
 
