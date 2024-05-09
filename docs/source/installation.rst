@@ -4,7 +4,7 @@ Installation
 Using PIP
 ---------
 
-ETFBA is compatible with Python versions xxxx and can be easily installed using *pip* from PyPI. To get started, first upgrade pip using the following command:
+ETFBA is compatible with Python versions 3.8 through 3.11 and can be easily installed using *pip* from PyPI. To get started, first upgrade pip using the following command:
 
 .. code-block:: python
 
