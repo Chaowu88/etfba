@@ -29,7 +29,7 @@ Then, install ETFBA using *pip*:
   pip install /path/to/etfba
   
 .. Note::
-  It's recommended to install ETFBA within a virtual environment to avoid conflicts with other Python packages. Refer to these `instructions <https://docs.python.org/3.8/tutorial/venv.html>`_ on creating virtual environments.
+  It's recommended to install ETFBA within a virtual environment to avoid conflicts with other Python packages. Refer to these `instructions <https://docs.python.org/3.8/tutorial/venv.html>`_ on creating virtual environments or `here <https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands>`_ for Conda environments.
 
 Solver Installation
 -------------------
