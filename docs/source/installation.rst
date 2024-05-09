@@ -10,7 +10,7 @@ ETFBA is compatible with Python versions xxxx and can be easily installed using 
 
   python -m pip install --upgrade pip
 
-Next, install ETFBA with the following command:
+Next, install ETFBA with the command:
 
 .. code-block:: python
 
