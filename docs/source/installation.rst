@@ -40,7 +40,7 @@ ETFBA uses the modeling language `Pyomo <http://www.pyomo.org/>`__ to formulate 
   
   conda install -c conda-forge glpk  
 
-For larger models, for example, the genome scale models, it is highly recommended to use the commercial optimizer `Gurobi <https://www.gurobi.com/>` and install the Python support:
+For larger models, for example, the genome scale models, it is highly recommended to use the commercial optimizer `Gurobi <https://www.gurobi.com/>`_ and install the Python support:
 
 .. code-block:: python
 
