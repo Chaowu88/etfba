@@ -6,14 +6,11 @@ molecular weight (MW), and standard reaction Gibbs energy.
 
 import os
 import re
-import sys
-ETFBA_PATH = r'C:\Users\cwu\Desktop\Software\ETFBA\etfba-main\src'
-sys.path.append(ETFBA_PATH)
 from cobra.io import load_json_model
 from etfba import Model, Metabolite, Reaction
 
 
-COBRA_MODEL_FILE = 'path/to/etfba-main/models/e_coli/iML1515.json'
+COBRA_MODEL_FILE = './iML1515.json'
 
 DEFAULT_MW = 40       # default enzyme molecular weight in kDa
 DEFAULT_KCAT = 200    # default reaction catalytic rate constant in 1/s
