@@ -24,22 +24,22 @@ def main():
     model_name = os.path.splitext(filename)[0]
     model = Model(model_name)
     for cobra_rxn in cobra_model.reactions:
-        if re.search(r'biomass', cobra_rxn.name, flags = re.I):
+        if re.search(r'biomass', cobra_rxn.name, flags=re.I):
             is_biomass_formation = True
         else:
             is_biomass_formation = False
 
-        if re.search(r'exchange', cobra_rxn.subsystem, flags = re.I):
+        if re.search(r'exchange', cobra_rxn.subsystem, flags=re.I):
             is_exch_reaction = True
         else:
             is_exch_reaction = False
 
-        if re.search(r'proton transport', cobra_rxn.name, flags = re.I):
+        if re.search(r'proton transport', cobra_rxn.name, flags=re.I):
             is_h_transport = True
         else:
             is_h_transport = False
 
-        if re.search(r'H2O transport', cobra_rxn.name, flags = re.I):
+        if re.search(r'H2O transport', cobra_rxn.name, flags=re.I):
             is_h2o_transport = True
         else:
             is_h2o_transport = False    
@@ -55,15 +55,15 @@ def main():
             cobra_rxn.id, 
             cobra_rxn.name, 
             cobra_rxn.subsystem, 
-            forward_kcat = DEFAULT_KCAT, 
-            backward_kcat = DEFAULT_KCAT if rev else None,
-            molecular_weight = DEFAULT_MW, 
-            standard_gibbs_energy = DEFAULT_DGPM, 
-            reversible = rev,
-            is_biomass_formation = is_biomass_formation, 
-            is_exch_reaction = is_exch_reaction,
-            is_h_transport = is_h_transport, 
-            is_h2o_transport = is_h2o_transport
+            forward_kcat=DEFAULT_KCAT, 
+            backward_kcat=DEFAULT_KCAT if rev else None,
+            molecular_weight=DEFAULT_MW, 
+            standard_gibbs_energy=DEFAULT_DGPM, 
+            reversible=rev,
+            is_biomass_formation=is_biomass_formation, 
+            is_exch_reaction=is_exch_reaction,
+            is_h_transport=is_h_transport, 
+            is_h2o_transport=is_h2o_transport
         )
 
         subs_cores = {}
@@ -83,16 +83,16 @@ def main():
                 cobra_metab.id, 
                 cobra_metab.name, 
                 cobra_metab.compartment, 
-                is_h = is_h, 
-                is_h2o = is_h2o
+                is_h=is_h, 
+                is_h2o=is_h2o
             )    
             if coe < 0:
                 subs_cores[reac] = -coe
             elif coe > 0:
                 pros_coes[reac] = coe
 
-            rxn.add_substrates(coes = subs_cores)
-            rxn.add_products(coes = pros_coes)
+            rxn.add_substrates(coes=subs_cores)
+            rxn.add_products(coes=pros_coes)
 
         model.add_reactions([rxn])
 
