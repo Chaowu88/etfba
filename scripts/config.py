@@ -1,4 +1,4 @@
-DIR = '/home/cwu/Projects/ETFBA/etfba-main/scripts'
+DIR = '/path/to/etfba-main/scripts'
 
 GROWTH_TYPE = 'anaerobic'   # {'anaerobic', 'aerobic'}
 
