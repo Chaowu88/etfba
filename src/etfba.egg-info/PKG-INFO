@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: etfba
+Version: 0.2.0
+Summary: ETFBA is a package for constraints-based metabolic flux analysis
+Home-page: https://github.com/Chaowu88/etfba
+Author: Chao Wu
+Author-email: chaowu09@gmail.com
+License: GNU General Public License v3.0
+Keywords: metabolic flux,thermodynamics,enzyme protein allocation,variability,metabolism,biology,mixed-integer linear programming,variability analysis
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy<=1.26.4,>=1.20.2
+Requires-Dist: pandas<=2.2.2,>=1.0.5
+Requires-Dist: scipy<=1.13.0,>=1.10.1
+Requires-Dist: sympy<=1.12,>=1.6.1
+Requires-Dist: pyomo<=6.7.2,>=6.2
+Requires-Dist: multiprocess<=0.70.16,>=0.70.14
+Requires-Dist: xlrd
+Requires-Dist: openpyxl
