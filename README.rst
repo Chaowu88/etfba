@@ -10,31 +10,41 @@ ETFBA allows for the application of enzyme protein allocation and thermodynamic 
 - TFBA: FBA with thermodynamic constraints activated.
 - ETFBA: FBA with both enzyme protein allocation and thermodynamic constraints activated.
 
-The constraints of enzyme protein allocation and thermodynamics can be used seperately or jointly in the model, thus yielding various optimization problems, such as: FBA (traditional flux balance analysis), EFBA (enzyme protein allocation constraint activated), TFBA (thermodynamic constraints activated) and ETFBA (both type of constraints activated). Variability analysis can further be performed to assess the possible range of metabolic fluxes (FVA, EFVA, TFVA and ETFVA), enzyme protein costs (EVA and TEVA) and reaction Gibbs energy change (TVA and ETVA) while still achieving a certain level of optimality in the objective function. For more information, refer to our `documentation <https://etfba.readthedocs.io/en/latest/index.html>`__.
+Variability analysis allows you to evaluate the potential ranges of metabolic fluxes, enzyme protein costs, and reaction Gibbs energy changes while ensuring that the objective function remains within a specified level of optimality. This analysis includes:
+
+- FVA: Flux variability analysis.
+- EFVA: Enzyme-constrained FVA.
+- TFVA: Thermodynamic FVA.
+- EVA: Enzyme variability analysis.
+- TEVA: Thermodynamic EVA.
+- TVA: Thermodynamic variability analysis.
+- ETVA: Enzyme-constrained TVA.
+
+For further details, refer to our `documentation <https://etfba.readthedocs.io/en/latest/index.html>`__.
 
 Installation
 ============
 
-ETFBA was tested in Python 3.8, 3.9, 3.10 and 3.11. It can be installed using *pip* from PyPI:
+ETFBA has been tested with Python versions 3.8, 3.9, 3.10 and 3.11. It can be installed using *pip* from PyPI:
 
 .. code-block:: python
 
   python -m pip install --upgrade pip
   pip install etfba
 
-or from source (assuming you have `git <https://git-scm.com/>`__ installed):
+Alternatively, you can install it from source (assuming `git <https://git-scm.com/>`__ is installed):
 
 .. code-block:: python
 
   git clone https://github.com/Chaowu88/etfba.git /path/to/etfba
   pip install /path/to/etfba
 
-Installation within an `virtual environment <https://docs.python.org/3.8/tutorial/venv.html>`__ is recommendated.
+Note: It is recommended to install ETFBA within a `virtual environment <https://docs.python.org/3.8/tutorial/venv.html>`__.
 
 Solver installation
 ===================
 
-ETFBA uses the modeling language `Pyomo <https://www.pyomo.org/>`__ to formulate linear programming (LP) and mixed integer linear programming (MILP) problems. Freely available solver glpk can be installed by:
+ETFBA uses the modeling language `Pyomo <https://www.pyomo.org/>`__ to formulate linear programming (LP) and mixed integer linear programming (MILP) problems. You can install the freely available solver GLPK via conda:
 
 .. code-block:: python
 
@@ -49,7 +59,7 @@ For larger models, such as genome scale models, it is highly recommended to use 
 Example Usage
 =============
 
-The ETFBA model can be built from stratch or translated from a `COBRA <https://cobrapy.readthedocs.io/en/latest/io.html>`__ model as examplified `here <https://etfba.readthedocs.io/en/latest/building_model.html>`__. A typicall usage to estimate the flux distribution constrained by enzyme protein allocation and thermodynamics is as below:
+You can build an ETFBA model from scratch or convert it from a `COBRA <https://cobrapy.readthedocs.io/en/latest/io.html>`__ model (refer to `here <https://etfba.readthedocs.io/en/latest/building_model.html>`__ for more details). Below is an example of estimating the flux distribution constrained by enzyme protein allocation and thermodynamics:
 
 .. code-block:: python
 
@@ -70,7 +80,7 @@ The ETFBA model can be built from stratch or translated from a `COBRA <https://c
       parsimonious=True         # to obtain parsimonious flux distributions
   ).solve(solver='gurobi')
 
-And estimate the variability of fluxes:
+To estimate the variability of fluxes:
 
 .. code-block:: python
 
@@ -88,7 +98,7 @@ And estimate the variability of fluxes:
       enz_prot_lb=enz_ub
   ).solve(solver='gurobi', n_jobs=100)
 
-For more information, please refer to the `documentation <https://etfba.readthedocs.io/en/latest/index.html>`__.
+For more detailed information, please refer to the complete `documentation <https://etfba.readthedocs.io/en/latest/index.html>`__.
 
 
 
