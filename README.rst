@@ -6,9 +6,9 @@ ETFBA is a Python package designed for performing **e**\ nzyme protein allocatio
 ETFBA allows for the application of enzyme protein allocation and thermodynamic constraints either individually or jointly within the model. This flexibility enables users to solve various optimization problems, including:
 
 - FBA: Traditional flux balance analysis.
-- EFBA: FBA with enzyme protein allocation constraints activated.
-- TFBA: FBA with thermodynamic constraints activated.
-- ETFBA: FBA with both enzyme protein allocation and thermodynamic constraints activated.
+- EFBA: FBA with enzyme protein allocation constraints.
+- TFBA: FBA with thermodynamic constraints.
+- ETFBA: FBA with both enzyme protein allocation and thermodynamic constraints.
 
 Variability analysis allows you to evaluate the potential ranges of metabolic fluxes, enzyme protein costs, and reaction Gibbs energy changes while ensuring that the objective function remains within a specified level of optimality. This analysis includes:
 
