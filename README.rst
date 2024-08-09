@@ -1,5 +1,6 @@
+=====
 ETFBA
-=======================================
+=====
 
 ETFBA is a Python package designed for performing **e**\ nzyme protein allocation and **t**\ hermodynamics constraint-based **f**\ lux **b**\ alance **a**\ nalysis. It extends traditional flux balance analysis (FBA) by incorporating constraints based on the availability of catalytic enzyme proteins and the second law of thermodynamics, offering a more comprehensive approach to modeling metabolic fluxes.
 
