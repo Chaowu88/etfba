@@ -66,7 +66,7 @@ def etfba(out_dir):
             inc_enz_cons=inc_enz_cons,
             enz_prot_lb=Q,
             parsimonious=True,
-        ).solve(solver = 'gurobi')                                             
+        ).solve(solver='gurobi')                                             
         
         print(f"Growth rate: {res.opt_fluxes['BIOMASS_Ec_iML1515_core_75p37M']:.3f}")
         print(f"Glucose uptake: {res.opt_fluxes['EX_glc__D_e']:.3f}")
