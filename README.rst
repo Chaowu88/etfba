@@ -81,6 +81,9 @@ You can build an ETFBA model from scratch or convert it from a `COBRA <https://c
       parsimonious=True         # to obtain parsimonious flux distributions
   ).solve(solver='gurobi')
 
+  opt_growth_rate = res.opt_objective
+  opt_metabolic_fluxes = res.opt_fluxes
+
 To estimate the variability of fluxes:
 
 .. code-block:: python
@@ -98,6 +101,8 @@ To estimate the variability of fluxes:
       inc_enz_cons=eff_rxns,
       enz_prot_lb=enz_ub
   ).solve(solver='gurobi', n_jobs=100)
+
+  metabolic_flux_ranges = res.flux_ranges
 
 For more detailed information, please refer to the complete `documentation <https://etfba.readthedocs.io/en/latest/index.html>`__.
 
