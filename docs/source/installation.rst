@@ -16,7 +16,7 @@ Next, install ETFBA with the command:
 
   pip install etfba  
 
-Alternatively, you can install FreeFlux from the source code by cloning the GitHub repository using the following command (assuming you have `git <https://git-scm.com/>`__ installed):
+Alternatively, you can install from the source code by cloning the GitHub repository using the following command (assuming you have `git <https://git-scm.com/>`__ installed):
 
 .. code-block:: python
 
@@ -40,7 +40,7 @@ ETFBA uses the modeling language `Pyomo <http://www.pyomo.org/>`__ to formulate 
   
   conda install -c conda-forge glpk  
 
-For larger models, such as genome scale models, it is highly recommended to use the commercial optimizer `Gurobi <https://www.gurobi.com/>`_ and install the Python support:
+For larger models, such as genome scale models, it is highly recommended to use the Gurobi optimizer with a commercial `license <https://support.gurobi.com/hc/en-us/articles/12684663118993-How-do-I-obtain-a-Gurobi-license>`_ and install the Python support:
 
 .. code-block:: python
 
