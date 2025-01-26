@@ -1,5 +1,4 @@
-'''
-Estimate feasible range of reaction Gibbs energies at low and neutral pHs.
+'''Estimate feasible range of reaction Gibbs energies at low and neutral pHs.
 
 Usage:
 python /path/to/etfba-main/scripts/estimate_gibbs_energy_ranges.py

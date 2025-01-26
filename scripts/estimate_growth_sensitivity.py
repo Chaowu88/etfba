@@ -1,5 +1,4 @@
-'''
-Estimate the sensitivity of growth rate to kcat downregulation and upregulation.
+'''Estimate the sensitivity of growth rate to kcat downregulation and upregulation.
 
 Usage:
 python /path/to/etfba-main/scripts/estimate_growth_sensitivity.py

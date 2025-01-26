@@ -1,5 +1,4 @@
-'''
-Estimate feasible range of enzyme protein costs at low and neutral pHs.
+'''Estimate feasible range of enzyme protein costs at low and neutral pHs.
 
 Usage:
 python /path/to/etfba-main/scripts/estimate_enzyme_protein_cost_ranges.py

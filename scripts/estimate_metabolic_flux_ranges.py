@@ -1,5 +1,4 @@
-'''
-Estimate feasible range of metabolic fluxes at low and neutral pHs.
+'''Estimate feasible range of metabolic fluxes at low and neutral pHs.
 
 Usage:
 python /path/to/etfba-main/scripts/estimate_metabolic_flux_ranges.py

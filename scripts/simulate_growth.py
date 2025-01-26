@@ -1,5 +1,4 @@
-'''
-Simulate anaerobic and aerobic growth at various external pHs.
+'''Simulate anaerobic and aerobic growth at various external pHs.
 
 Usage:
 python /path/to/etfba-main/scripts/simulate_growth.py
