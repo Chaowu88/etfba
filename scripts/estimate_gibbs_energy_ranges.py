@@ -3,18 +3,6 @@ Estimate feasible range of reaction Gibbs energies at low and neutral pHs.
 
 Usage:
 python /path/to/etfba-main/scripts/estimate_gibbs_energy_ranges.py
-
-ssh -m hmac-sha2-512 cwu@kestrel.hpc.nrel.gov
-Woyaolvkai123!
-srun --time=60 --account=runflux --partition=debug --ntasks=100 --pty $SHELL
-conda activate etfba-py38
-
-watch -n 0.5 -d "mpstat -P ALL 1 1"
-
-python /home/cwu/Projects/ETFBA/etfba-main/scripts/estimate_gibbs_energy_ranges.py
-
-~ 20 min per pH point (etva, 24 jobs)
-~ 7 min per pH point (etva, 100 jobs)
 '''
 
 
