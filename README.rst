@@ -1,17 +1,17 @@
 =====
-ETFBA
+PET-FBA
 =====
 
-ETFBA is a Python package designed for performing **e**\ nzyme protein allocation and **t**\ hermodynamics constraint-based **f**\ lux **b**\ alance **a**\ nalysis. It extends traditional flux balance analysis (FBA) by incorporating constraints based on the availability of catalytic enzyme proteins and the second law of thermodynamics, offering a more comprehensive approach to modeling metabolic fluxes.
+PET-FBA (pH-, Enzyme allocation-, and Thermodynamics-constrained Flux Balance Analysis) is a computational framework that integrates catalytic enzyme protein availability and reaction themodynamic feasibility, conveniently incorporating the pH effect on them. It provides a more comprehensive mechanistically grounded approach to modeling metabolic fluxes.
 
-ETFBA allows for the application of enzyme protein allocation and thermodynamic constraints either individually or jointly within the model. This flexibility enables users to solve various optimization problems, including:
+This repository host the Python implementation, released as etfba, which allows applying these constraints either individually or jointly within a model. This flexibility enables users to solve various optimization problems, including:
 
 - FBA: Traditional flux balance analysis.
 - EFBA: FBA with enzyme protein allocation constraints.
 - TFBA: FBA with thermodynamic constraints.
 - ETFBA: FBA with both enzyme protein allocation and thermodynamic constraints.
 
-Variability analysis allows you to evaluate the potential ranges of metabolic fluxes, enzyme protein costs, and reaction Gibbs energy changes while ensuring that the objective function remains within a specified level of optimality. This analysis includes:
+Variability analysis is supported, allowing users to evaluate the potential ranges of metabolic fluxes, enzyme protein costs, and reaction Gibbs energy changes while ensuring that the objective function remains within a specified level of optimality. This analysis includes:
 
 - FVA: Flux variability analysis.
 - EFVA: Enzyme-constrained FVA.
@@ -21,12 +21,12 @@ Variability analysis allows you to evaluate the potential ranges of metabolic fl
 - TVA: Thermodynamic variability analysis.
 - ETVA: Enzyme-constrained TVA.
 
-For further details, refer to our `documentation <https://etfba.readthedocs.io/en/latest/index.html>`__.
+For further details, please refer to our `documentation <https://etfba.readthedocs.io/en/latest/index.html>`__. For example of applying pH-dependent flux analysis, see the `script <https://github.com/Chaowu88/etfba/tree/main/scripts>`__.
 
 Installation
 ============
 
-ETFBA has been tested with Python versions 3.8, 3.9, 3.10 and 3.11. It can be installed using *pip* from PyPI:
+The package has been tested with Python versions 3.8, 3.9, 3.10 and 3.11. It can be installed using *pip* from PyPI:
 
 .. code-block:: python
 
@@ -40,12 +40,12 @@ Alternatively, you can install it from source (assuming `git <https://git-scm.co
   git clone https://github.com/Chaowu88/etfba.git /path/to/etfba
   pip install /path/to/etfba
 
-Note: It is recommended to install ETFBA within a `virtual environment <https://docs.python.org/3.8/tutorial/venv.html>`__.
+Note: It is recommended to install within a `virtual environment <https://docs.python.org/3.8/tutorial/venv.html>`__.
 
 Solver installation
 ===================
 
-ETFBA uses the modeling language `Pyomo <https://www.pyomo.org/>`__ to formulate linear programming (LP) and mixed integer linear programming (MILP) problems. You can install the freely available solver GLPK via conda:
+The package uses the modeling language `Pyomo <https://www.pyomo.org/>`__ to formulate linear programming (LP) and mixed integer linear programming (MILP) problems. You can install the freely available solver GLPK via conda:
 
 .. code-block:: python
 
@@ -60,7 +60,7 @@ For larger models, such as genome scale models, it is highly recommended to use 
 Example Usage
 =============
 
-You can build an ETFBA model from scratch or convert it from a `COBRA <https://cobrapy.readthedocs.io/en/latest/io.html>`__ model (refer to `here <https://etfba.readthedocs.io/en/latest/building_model.html>`__ for more details). Below is an example of estimating the flux distribution constrained by enzyme protein allocation and thermodynamics:
+You can build a model from scratch or convert it from a `COBRA <https://cobrapy.readthedocs.io/en/latest/io.html>`__ model (refer to `here <https://etfba.readthedocs.io/en/latest/building_model.html>`__ for more details). Below is an example of estimating the flux distribution constrained by enzyme protein allocation and thermodynamics:
 
 .. code-block:: python
 
