@@ -106,5 +106,8 @@ To estimate the variability of fluxes:
 
 For more detailed information, please refer to the complete `documentation <https://etfba.readthedocs.io/en/latest/index.html>`__.
 
+Citation
+========
 
+`Chao Wu, Jeffrey N. Law, Onyeka Onyenemezu, Jetendra K. Roy, Peter C. St. John, Robert L. Jernigan, Yannick J. Bomble, Laura Jarboe. PET-FBA: A lightweight enzyme allocation and thermodynamics-constrained flux analysis approach to explore Escherichia coli metabolic adaptation to intracellular acidification. Metabolic Engineering. 2025. <https://doi.org/10.1016/j.ymben.2025.12.003>`__
 
