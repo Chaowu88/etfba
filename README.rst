@@ -51,7 +51,7 @@ The package uses the modeling language `Pyomo <https://www.pyomo.org/>`__ to for
 
   conda install -c conda-forge glpk
 
-For larger models, such as genome scale models, it is highly recommended to use the commercial optimizer `Gurobi <https://www.gurobi.com/>`__ and install the Python support:
+For larger and more complex models, such as genome-scale models with thermodynamic constraints, it is highly recommended to use the commercial optimizer `Gurobi <https://www.gurobi.com/>`__ with its Python interface installed:
 
 .. code-block:: python
 
