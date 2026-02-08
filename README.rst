@@ -45,7 +45,7 @@ Note: It is recommended to install within a `virtual environment <https://docs.p
 Solver installation
 ===================
 
-The package uses the modeling language `Pyomo <https://www.pyomo.org/>`__ to formulate linear programming (LP) and mixed integer linear programming (MILP) problems. You can install the freely available solver GLPK via conda:
+The package uses the modeling language `Pyomo <https://www.pyomo.org/>`__ to formulate optimization problems. You can install the freely available solver GLPK via conda:
 
 .. code-block:: python
 
